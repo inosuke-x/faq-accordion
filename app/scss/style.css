@@ -1,0 +1,256 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  background-attachment: fixed;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4a4b5e;
+  line-height: 1.3;
+}
+
+.flex {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 920px;
+  min-height: 510px;
+  border-radius: 25px;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 1px 7px 25px -8px #000000;
+  box-shadow: 1px 7px 25px -8px #000000;
+}
+
+.image-div {
+  width: 50%;
+}
+
+.clipped-images {
+  position: absolute;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-desktop-bg {
+  position: absolute;
+  width: 960px;
+  top: -293px;
+  left: -565px;
+}
+
+.img-desktop-woman {
+  position: absolute;
+  width: 480px;
+  top: 60px;
+  left: -85px;
+}
+
+.img-desktop-box {
+  position: absolute;
+  top: 201px;
+  left: -93px;
+}
+
+.img-mobile-woman {
+  display: none;
+}
+
+.img-mobile-bg {
+  display: none;
+}
+
+@-webkit-keyframes expand {
+  from {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    max-height: 3rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes expand {
+  from {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    max-height: 3rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes collapse {
+  from {
+    max-height: 3rem;
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes collapse {
+  from {
+    max-height: 3rem;
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.faq {
+  width: 50%;
+  margin-top: 40px;
+}
+
+.faq h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding-right: 95px;
+}
+
+.item {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.question {
+  font-weight: 300;
+  position: relative;
+  font-size: 0.90rem;
+  color: #4a4b5e;
+}
+
+.question:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.open {
+  color: #4a4b5e;
+  font-weight: 700;
+}
+
+.arrow {
+  position: absolute;
+  right: 105px;
+  -webkit-transform: translate(0, 5px);
+          transform: translate(0, 5px);
+  pointer-events: none;
+}
+
+.flipped {
+  -webkit-transform: rotate(180deg) translate(0, -5px);
+          transform: rotate(180deg) translate(0, -5px);
+}
+
+.answer {
+  font-weight: 300;
+  color: #787887;
+  visibility: hidden;
+  display: block;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.expand {
+  -webkit-animation: expand 300ms ease-in-out forwards;
+          animation: expand 300ms ease-in-out forwards;
+}
+
+.collapse {
+  -webkit-animation: collapse 300ms ease-in-out forwards;
+          animation: collapse 300ms ease-in-out forwards;
+}
+
+@media screen and (max-width: 600px) {
+  .clipped-images {
+    display: none;
+  }
+  .img-desktop-bg {
+    display: none;
+  }
+  .img-desktop-box {
+    display: none;
+  }
+  .img-desktop-woman {
+    display: none;
+  }
+  .img-mobile-woman {
+    position: absolute;
+    display: block;
+    top: -108px;
+    left: 5%;
+  }
+  .img-mobile-bg {
+    display: block;
+    position: absolute;
+    left: 12%;
+  }
+  h1 {
+    text-align: center;
+  }
+  .flex {
+    min-width: 0;
+    min-height: 0;
+    top: 420px;
+    width: 325px;
+    height: 535px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .faq {
+    width: 260px;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .list {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .arrow {
+    right: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

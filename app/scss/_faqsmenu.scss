@@ -1,0 +1,127 @@
+@keyframes expand {
+  from { 
+      max-height: 0px;
+      opacity: 0;
+      visibility: hidden;
+  }
+  to  {
+      max-height: 3rem;
+      opacity: 1;
+      visibility: visible;
+  }
+}
+@keyframes collapse {
+  from  {
+      max-height: 3rem;
+      opacity: 1;
+      visibility: visible;
+  }
+
+  to { 
+      max-height: 0px;
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+.faq {
+  width: 50%;
+  margin-top: 40px;
+}
+.faq h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.list {
+  padding-right: 95px;
+}
+.item {
+  border-bottom: 1px solid $lightgreyblue;
+}
+.question {
+  font-weight: 300;
+  position: relative;
+  font-size: 0.90rem;
+  color: $verydarkgreyblue;
+}
+.question:hover {
+  color: $softred;
+  cursor: pointer;
+}
+.open {
+  color: $verydarkgreyblue;
+  font-weight: 700;
+}
+.arrow {
+  position: absolute;
+  right: 105px;
+  transform: translate(0, 5px);
+  pointer-events: none;
+}
+.flipped {
+  transform: rotate(180deg) translate(0, -5px);
+}
+.answer {
+  font-weight: 300;
+  color: $darkhgrey;
+  visibility: hidden;
+  display: block;
+  max-height: 0px;
+  overflow: hidden;
+}
+.expand {
+  animation: expand 300ms ease-in-out forwards;
+}
+.collapse {
+  animation: collapse 300ms ease-in-out forwards;
+}
+
+@media screen and (max-width: 600px) {    
+  .clipped-images {
+      display: none;
+  }
+  .img-desktop-bg {
+      display: none;
+  }
+  .img-desktop-box {
+      display: none;
+  }
+  .img-desktop-woman {
+      display: none;
+  }
+  .img-mobile-woman {
+    position: absolute;
+    display: block;
+    top: -108px;
+    left: 5%;
+  }
+  .img-mobile-bg {
+  display: block;
+  position: absolute;
+  left: 12%;
+  }
+  h1 {
+    text-align: center;
+  }
+  .flex {
+    min-width: 0;
+    min-height: 0;
+    top: 420px;
+    width: 325px;
+    height: 535px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .faq {
+      width: 260px;
+      padding-top: 30px;
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+  .list {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .arrow {
+      right: 20px;
+  }
+}
