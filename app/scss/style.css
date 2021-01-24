@@ -78,7 +78,15 @@ body {
 .img-mobile-bg {
   display: none;
 }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5%;
+}
 
+.attribution a {
+  color: #3e52a3;
+}
 @-webkit-keyframes expand {
   from {
     max-height: 0px;
